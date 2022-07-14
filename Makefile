@@ -5,7 +5,7 @@ run:
 	poetry run python manage.py runserver
 
 req:
-	poetry export -f requirements.txt --output requirements.txt --without-hashes
+	poetry export -f requirements.txt --output requirements.txt
 
 deps:
 	poetry update
