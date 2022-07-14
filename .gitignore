@@ -1,0 +1,11 @@
+*.egg-info
+*.pyc
+__pycache__/
+ dist/
+.venv
+dist/
+.coverage
+coverage.xml
+.pytest_cache/
+/*.lock
+/tmp/
