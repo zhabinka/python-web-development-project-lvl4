@@ -5,4 +5,10 @@ run:
 	poetry run python manage.py runserver
 
 req:
-	pip3 freeze > requirements.txt
+	poetry export -f requirements.txt --output requirements.txt
+
+deps:
+	poetry update
+
+deploy:
+	git push heroku main
