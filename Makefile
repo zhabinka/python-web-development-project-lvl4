@@ -15,3 +15,9 @@ deploy:
 
 logs:
 	heroku logs --tail
+
+locale:
+	poetry run django-admin makemessages -l ru
+
+localecompile:
+	poetry run django-admin compilemessages
