@@ -9,8 +9,12 @@ def addUser(request):
         form = AddUserForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/users/create')
+            return HttpResponseRedirect('/users')
     else:
         form = AddUserForm()
 
     return render(request, 'users/create.html', { 'form': form })
+
+def index(request):
+    users = User.objects.all()
+    return render(request, 'users/index.html', { 'users': users})
