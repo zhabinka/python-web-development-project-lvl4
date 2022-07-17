@@ -1,6 +1,7 @@
 from django import forms
+from task_manager.users.models import User
 
-class AddUserForm(forms.Form):
-    email = forms.CharField()
-    first_name = forms.CharField(max_length=100)
-    last_name = forms.CharField(max_length=100)
+class AddUserForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ('email', 'first_name', 'last_name')

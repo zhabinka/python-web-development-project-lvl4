@@ -8,11 +8,8 @@ def addUser(request):
     if request.method == 'POST':
         form = AddUserForm(request.POST)
         if form.is_valid():
-            try:
-                User.objects.create(**form.cleaned_data)
-                return HttpResponseRedirect('/users/')
-            except:
-                form.add_error(None, 'Error')
+            form.save()
+            return HttpResponseRedirect('/users/create')
     else:
         form = AddUserForm()
 
