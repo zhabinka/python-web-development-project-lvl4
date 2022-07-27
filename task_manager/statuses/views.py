@@ -6,7 +6,6 @@ from task_manager.statuses.models import Status
 
 def index(request):
     statuses = Status.objects.all()
-    print(statuses.first())
     return render( request, 'statuses/index.html', {'statuses': statuses})
 
 
