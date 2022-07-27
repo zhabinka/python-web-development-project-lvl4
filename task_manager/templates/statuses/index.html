@@ -1,0 +1,10 @@
+{% load bootstrap4 %}
+Статусы: {{ statuses }}
+<ul>
+{% for status in statuses %}
+<li>{{ status.id }} {{ status.name }} <a href="{{ status.id }}/delete/">Удалить</a> <a href="{{ status.id }}/update/">Редактировать</a></li>
+{% endfor %}
+</ul>
+
+<p><a href="/statuses/create">Добавить статус</a></p>
+
