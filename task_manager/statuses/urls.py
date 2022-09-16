@@ -6,7 +6,7 @@ app_name = 'statuses'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('create/', views.createStatus),
+    path('create/', views.createStatus, name='create'),
     path('<int:pk>/delete/', views.deleteStatus),
     path('<int:pk>/update/', views.editStatus),
 ]

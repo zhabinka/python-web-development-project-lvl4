@@ -1,12 +1,13 @@
 {% extends "../index.html" %}
+{% load i18n %}
 
 {% block content %}
 Статусы: {{ statuses }}
 <ul>
 {% for status in statuses %}
-<li>{{ status.id }} {{ status.name }} <a href="{{ status.id }}/delete/">Удалить</a> <a href="{{ status.id }}/update/">Редактировать</a></li>
+<li>{{ status.id }} {{ status.name }} <a href="{{ status.id }}/delete/">{% translate 'Delete' %}</a> <a href="{{ status.id }}/update/">{% translate 'Edit' %}</a></li>
 {% endfor %}
 </ul>
 
-<p><a href="/statuses/create">Добавить статус</a></p>
+<p><a href="{% url 'statuses:create' %}">{% translate 'Add status' %}</a></p>
 {% endblock %}

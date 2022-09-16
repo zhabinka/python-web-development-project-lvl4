@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-27 15:30+0300\n"
+"POT-Creation-Date: 2022-09-16 20:30+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,9 +45,39 @@ msgid "Login"
 msgstr "Вход"
 
 #: task_manager/templates/index.html:44
+#: task_manager/templates/users/create.html:19
 msgid "Sign up"
 msgstr "Регистрация"
 
-#: task_manager/templates/index.html:64
+#: task_manager/templates/index.html:66
 msgid "Footer"
 msgstr "Подвал"
+
+#: task_manager/templates/statuses/create.html:9
+#: task_manager/templates/statuses/edit.html:9
+#: task_manager/templates/tasks/create.html:9
+msgid "Save"
+msgstr "Сохранить"
+
+#: task_manager/templates/statuses/delete.html:10
+#: task_manager/templates/tasks/delete.html:10
+msgid "Yes, delete"
+msgstr "Да, удалить"
+
+#: task_manager/templates/statuses/index.html:8
+#: task_manager/templates/tasks/index.html:11
+msgid "Delete"
+msgstr "Удалить"
+
+#: task_manager/templates/statuses/index.html:8
+#: task_manager/templates/tasks/index.html:12
+msgid "Edit"
+msgstr "Редактировать"
+
+#: task_manager/templates/statuses/index.html:12
+msgid "Add status"
+msgstr "Добавить статус"
+
+#: task_manager/templates/tasks/index.html:16
+msgid "Add task"
+msgstr "Добавить задачу"
