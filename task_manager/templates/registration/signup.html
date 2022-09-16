@@ -1,3 +1,8 @@
+{% extends "../index.html" %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block content %}
 <h2>Sign Up</h2>
 
 <p>
@@ -10,9 +15,10 @@ hi, {{ user.username}}<br>
 
 <form method="post">
   {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Sign Up</button>
+  {% bootstrap_form form %}
+  {% translate 'Sign up' as sign_up_translate %}
+  {% bootstrap_button sign_up_translate button_type="submit" button_class="btn-primary" %}
 </form>
 {% endif %}
 </p>
-
+{% endblock %}

@@ -1,3 +1,7 @@
+{% extends "../index.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
 <h2>Log In</h2>
 
 <p>
@@ -11,8 +15,9 @@ hi, {{ user.username}}<br>
 
 <form method="post">
   {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Log In</button>
+  {% bootstrap_form form %}
+  {% bootstrap_button "Log In" button_type="submit" button_class="btn-primary" %}
 </form>
 {% endif %}
 </p>
+{% endblock %}

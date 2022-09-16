@@ -1,4 +1,6 @@
-{% load bootstrap4 %}
+{% extends "../index.html" %}
+
+{% block content %}
 Задачи: {{ tasks }}
 {% for task in tasks %}
 <h2> {{ task.title }} <small>{{ taks.id }}</small></h2>
@@ -11,3 +13,4 @@
 {% endfor %}
 
 <p><a href="/tasks/create">Добавить задачу</a></p>
+{% endblock %}

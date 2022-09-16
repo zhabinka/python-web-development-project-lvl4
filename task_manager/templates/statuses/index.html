@@ -1,4 +1,6 @@
-{% load bootstrap4 %}
+{% extends "../index.html" %}
+
+{% block content %}
 Статусы: {{ statuses }}
 <ul>
 {% for status in statuses %}
@@ -7,4 +9,4 @@
 </ul>
 
 <p><a href="/statuses/create">Добавить статус</a></p>
-
+{% endblock %}

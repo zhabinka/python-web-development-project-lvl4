@@ -1,11 +1,11 @@
+{% extends "../index.html" %}
 {% load bootstrap4 %}
-{% load i18n %}
-{% get_current_language as LANGUAGE_CODE %}
 
+{% block content %}
 <form method='post'>
 {% csrf_token %}
 <p>Вы уверены, что хотите удалить задачу <b>"{{ task.description }}"</b>?</p>
 <!-- {% bootstrap_form form %} -->
 {% bootstrap_button "Yes, delete" button_type="submit" button_class="btn-primary" %}
 </form>
-
+{% endblock %}

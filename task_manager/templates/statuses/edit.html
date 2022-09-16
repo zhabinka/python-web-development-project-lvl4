@@ -1,9 +1,10 @@
+{% extends "../index.html" %}
 {% load bootstrap4 %}
-{% load i18n %}
-{% get_current_language as LANGUAGE_CODE %}
 
+{% block content %}
 <form method='post'>
 {% csrf_token %}
 {% bootstrap_form form %}
 {% bootstrap_button "Save" button_type="submit" button_class="btn-primary" %}
 </form>
+{% endblock %}

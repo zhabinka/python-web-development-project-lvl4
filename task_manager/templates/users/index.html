@@ -1,7 +1,10 @@
-{% load bootstrap4 %}
+{% extends "../index.html" %}
+
+{% block content %}
 User: {{ user }}
 <ul>
 {% for user in users %}
 <li>{{ user.email }} – {{ user.first_name }} {{ user.last_name }}</li>
 {% endfor %}
 </ul>
+{% endblock %}
