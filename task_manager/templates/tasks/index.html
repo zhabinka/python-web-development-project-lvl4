@@ -8,8 +8,8 @@
 <p>{{ task.description }}</p>
 <p>Автор - {{ task.author }}, исполнитель - {{ task.executor }}</p>
 <p>
-  <a href="{{ task.id }}/delete/">{% translate 'Delete' %}</a>
-  <a href="{{ task.id }}/update/">{% translate 'Edit' %}</a>
+<a href="{% url 'tasks:delete' task.id %}">{% translate 'Delete' %}</a>
+<a href="{% url 'tasks:edit' task.id %}">{% translate 'Edit' %}</a>
 </p>
 {% endfor %}
 
